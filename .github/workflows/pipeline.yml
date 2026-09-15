@@ -17,7 +17,10 @@ jobs:
 
       - name: Simular build
         run: echo "Construyendo la aplicación..."
-
+      - name: Simular tests fallidos
+        run: |
+          echo "Ejecutando tests..."
+          exit 1
   test:
     name: Test
     runs-on: ubuntu-latest
